@@ -1,4 +1,10 @@
-class Component extends HTMLElement {
+/**
+ * a base class that contains some useful utilities.
+ * extend new components from this class.
+ *
+ * @extends HTMLElement
+ */
+class Base extends HTMLElement {
   addClass(className) {
     this.classList.add(className)
   }
@@ -11,13 +17,9 @@ class Component extends HTMLElement {
     this.classList.toggle(className)
   }
 
-  setId(id) {
-    this.id = id
-  }
-
   attr(name, val) {
     return val ? this.setAttribute(name, val) : this.getAttribute(name)
   }
 }
 
-export default Component
+export default Base
